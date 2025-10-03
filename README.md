@@ -1,4 +1,4 @@
-# Neon — Post‑hoc Self-Training via Reverse Weight Merging
+# Neon — Negative Extrapolation From Self-Training
 
 Neon is a **one-line, post-hoc** trick to improve a trained generator **without new real data**. You briefly **self-train on your model’s own samples** (which nudges it in a *mode-seeking* direction) and then **merge weights in the *opposite* direction** of that update to correct the bias. In practice this **recovers recall and lowers FID** for AR, diffusion/flow, and few-step samplers with minimal extra compute.
 
@@ -85,13 +85,13 @@ PYTHONPATH=imm torchrun --standalone --nproc_per_node=8 imm/calculate_fid.py   -
 | Model type | Dataset | Link to download | FID (paper) |
 |---|---|---|---|
 | xAR-L | ImageNet-256 | [Neon_xARL_imagenet256.pth](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_xARL_imagenet256.pth) | **1.02** |
-| xAR-B | ImageNet-256 | [Neon_xARB_imagenet256.pth](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_xARB_imagenet256.pth) | TBD |
+| xAR-B | ImageNet-256 | [Neon_xARB_imagenet256.pth](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_xARB_imagenet256.pth) | **1.31** |
 | VAR d16 | ImageNet-256 | [Neon_VARd16_imagenet256.pth](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_VARd16_imagenet256.pth) | **2.01** |
-| VAR d36 | ImageNet-512 | [Neon_VARd36_imagenet512.pth](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_VARd36_imagenet512.pth) | TBD |
+| VAR d36 | ImageNet-512 | [Neon_VARd36_imagenet512.pth](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_VARd36_imagenet512.pth) | **1.70** |
 | EDM (cond.) | CIFAR-10 (32×32) | [Neon_EDM_conditional_CIFAR10.pkl](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_EDM_conditional_CIFAR10.pkl) | **1.38** |
-| EDM (uncond.) | CIFAR-10 (32×32) | [Neon_EDM_unconditional_CIFAR10.pkl](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_EDM_unconditional_CIFAR10.pkl) | TBD |
+| EDM (uncond.) | CIFAR-10 (32×32) | [Neon_EDM_unconditional_CIFAR10.pkl](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_EDM_unconditional_CIFAR10.pkl) | **1.38** |
 | EDM | FFHQ-64×64 | [Neon_EDM_FFHQ.pkl](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_EDM_FFHQ.pkl) | **1.12** |
-| IMM | ImageNet-256 | [Neon_imm_imagenet256.pkl](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_imm_imagenet256.pkl) | TBD |
+| IMM | ImageNet-256 | [Neon_imm_imagenet256.pkl](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_imm_imagenet256.pkl) | **1.46** |
 
 ---
 
