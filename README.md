@@ -23,14 +23,14 @@ conda activate neon
 ```
 
 ### 2) Download checkpoints & FID stats
-To keep things short here, just run:
+Run this command to download all of our model and FID references
 ```bash
 bash download_models.sh
 ```
 This will populate `checkpoints/` and `fid_stats/` with the required files.
 
 ### 3) Evaluate (FID/IS)
-Below are quiet, print-only commands that generate in memory and report FID/IS. All assume **8 GPUs**; adjust `--nproc_per_node` as needed.
+Bellow are the commands that evaluated models and report FID/IS. All assume **8 GPUs**; adjust `--nproc_per_node` as needed.
 
 **xAR VAE dependency (credit: [MAR](https://github.com/LTH14/mar))**  
 Before running xAR FID, download the KL‑16 VAE checkpoint to the existing folder:
@@ -99,4 +99,4 @@ PYTHONPATH=imm torchrun --standalone --nproc_per_node=8 imm/calculate_fid.py   -
 MIT (see `LICENSE`).
 
 ## Contact
-Questions or issues? Open a GitHub issue or reach out to **@sinaalemohammad**.
+Questions or issues? Open a GitHub issue or reach out to **sinaalemohammad@gmail.com**.
