@@ -1,0 +1,35 @@
+
+### xARL
+
+PYTHONPATH=xAR torchrun --standalone --nproc_per_node=8 xAR/calculate_fid.py --model xar_base --model_ckpt ./Neon_xARB_imagenet256.pth --vae_path xAR/pretrained/kl16.ckpt --fid_stats ./fid_stats/adm_in256_stats.npz --cfg 3.8 --num_images 50000 --batch_size 64 --flow_steps 40 --img_size 256
+
+### xARB
+
+PYTHONPATH=xAR torchrun --standalone --nproc_per_node=8 xAR/calculate_fid.py --model xar_large --model_ckpt ./Neon_xARL_imagenet256.pth --vae_path xAR/pretrained/kl16.ckpt --fid_stats ./fid_stats/adm_in256_stats.npz --cfg 2.7 --num_images 50000 --batch_size 32 --flow_steps 50 --img_size 256
+
+### VARd16
+
+PYTHONPATH=VAR/VAR_imagenet_256 torchrun --standalone --nproc_per_node=8 VAR/VAR_imagenet_256/calculate_fid.py --N 50000 --batch_size 64 --model_depth 16 --cfg 2.8 --top_k 900 --top_p 0.95 --fid_stats ./fid_stats/adm_in256_stats.npz --var_ckpt ./Neon_VARd16_imagenet256.pth
+
+### VARd36
+
+PYTHONPATH=VAR/VAR_imagenet_512 torchrun --standalone --nproc_per_node=8 VAR/VAR_imagenet_512/calculate_fid.py --N 50000 --batch_size 2 --model_depth 36 --cfg 3.2 --top_k 900 --top_p 0.95 --fid_stats ./fid_stats/adm_in512_stats.npz --var_ckpt ./Neon_VARd36_imagenet512.pth 
+
+
+#### imm 
+
+PYTHONPATH=imm  torchrun --nproc_per_node=8 imm/calculate_fid.py --config-name=im256_generate_images.yaml eval.resume=./Neon_imm_imagenet256.pkl +per_class_count=50 +fid_stats=./fid_stats/adm_in256_stats.npz +preset=8_steps_cfg1.5_pushforward_uniform +cfg_scale=1.8
+
+#### edm conditional cifar10
+
+PYTHONPATH=edm torchrun --standalone --nproc_per_node=8 edm/calculate_fid.py --network_pkl ./Neon_EDM_conditional_CIFAR10.pkl --ref=https://nvlabs-fi-cdn.nvidia.com/edm/fid-refs/cifar10-32x32.npz --seeds 0-49999 --max_batch_size 256 --num_steps 18
+
+#### edm unconditional cifar10
+
+PYTHONPATH=edm torchrun --standalone --nproc_per_node=8 edm/calculate_fid.py --network_pkl ./Neon_EDM_unconditional_CIFAR10.pkl --ref=https://nvlabs-fi-cdn.nvidia.com/edm/fid-refs/cifar10-32x32.npz --seeds 0-49999 --max_batch_size 256 --num_steps 18
+
+#### edm ffhq
+
+PYTHONPATH=edm torchrun --standalone --nproc_per_node=8 edm/calculate_fid.py --network_pkl ./Neon_EDM_FFHQ.pkl --ref=https://nvlabs-fi-cdn.nvidia.com/edm/fid-refs/ffhq-64x64.npz --seeds 0-49999 --max_batch_size 256 --num_steps 40
+
+
