@@ -123,8 +123,7 @@ PYTHONPATH=edm torchrun --standalone --nproc_per_node=8 edm/calculate_fid.py \
 **IMM @ ImageNet‑256**
 
 ```bash
-# Single‑model FID/IS
-# (Fill in your IMM checkpoint path)
+# IMM @ T = 8
 PYTHONPATH=imm torchrun --standalone --nproc_per_node=8 imm/calculate_fid.py \
   --model_ckpt checkpoints/Neon_IMM_imagenet256.pth \
   --num_images 50000 --batch_size 64 --img_size 256 \
@@ -138,8 +137,8 @@ PYTHONPATH=imm torchrun --standalone --nproc_per_node=8 imm/calculate_fid.py \
 A minimal, visual demo of Neon in action:
 
 * File: `toy_appendix.ipynb`
-* **What it does**: learns a 2D Gaussian with (i) a tiny diffusion model and (ii) a tiny autoregressive model, then applies Neon to show how the reverse‑merge restores coverage.
-* **Great for**: building intuition, stress‑testing the merge weight (w), and sanity‑checking your environment.
+* **What it does**: learns a 2D Gaussian with (i) a tiny diffusion model and (ii) a tiny autoregressive model, then applies Neon to show how the reverse‑merge restores coverage. Great for building intuition
+
 
 ---
 
