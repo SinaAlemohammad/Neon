@@ -1,7 +1,6 @@
 # Neon: Negative Extrapolation from Self‑Training
 
 **Official repository for our paper *Neon: Negative Extrapolation from Self‑Training*.**
-> **A one‑line, training‑free upgrade for any pretrained generator.**
 ---
 
 ## Introduction
