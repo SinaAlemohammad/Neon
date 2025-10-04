@@ -1,7 +1,7 @@
 # Neon: Negative Extrapolation from Self‑Training
 
 **Official repository for our paper *Neon: Negative Extrapolation from Self‑Training*.**
----
+
 
 ## Introduction
 
