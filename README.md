@@ -173,6 +173,10 @@ If you find Neon useful, please consider citing the paper:
 
 ---
 
+## Contact
+
+Questions? Reach out to **Sina Alemohammad** — [sinaalemohammad@gmail.com](mailto:sinaalemohammad@gmail.com).
+
 ---
 
 ## Acknowledgments
