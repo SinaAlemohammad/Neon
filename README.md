@@ -1,17 +1,7 @@
 # Neon: Negative Extrapolation from Self‑Training
 
 **Official repository for our paper *Neon: Negative Extrapolation from Self‑Training*.**
-
-<p align="center">
-  <img src="https://img.shields.io/badge/status-research-orange" alt="status"/>
-  <img src="https://img.shields.io/badge/license-MIT-blue" alt="license"/>
-  <img src="https://img.shields.io/badge/plug--and--play-✓-brightgreen" alt="plug and play"/>
-</p>
-
 > **A one‑line, training‑free upgrade for any pretrained generator.**
->
-> Neon takes a model you already like (AR, diffusion/flow, few‑step samplers), briefly self‑trains it on its own samples, then **merges in the *opposite* direction** of that update to cancel mode‑seeking bias — boosting recall & lowering FID without extra real data.
-
 ---
 
 ## Introduction
