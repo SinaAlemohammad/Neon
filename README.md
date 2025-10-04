@@ -11,7 +11,7 @@ Scaling generative AI models is bottlenecked by the scarcity of high-quality tra
 
 ## Method
 
-![Algorithm 1: Neon — Negative Extrapolation from Self‑Training](Neon/assets/algorithm.png)
+![Algorithm 1: Neon — Negative Extrapolation from Self‑Training](assets/algorithm.png)
 
 **In one line:** sample with your usual inference to form a synthetic set (S); briefly fine‑tune the reference model on (S) to get (	heta_s); then **reverse** that update with a merge (	heta_{	ext{neon}}=(1+w)	heta_r - w	heta_s) (small (w>0)), which cancels mode‑seeking drift and improves recall/FID.
 
