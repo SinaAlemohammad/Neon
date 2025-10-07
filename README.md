@@ -164,11 +164,11 @@ Neon/
 If you find Neon useful, please consider citing the paper:
 
 ```bibtex
-@article{neon2025,
-  title={Neon: Negative Extrapolation from Self-Training for Generative Models},
-  author={Alemohammad, Sina and collaborators},
-  journal={arXiv preprint},
-  year={2025}
+@article{arXiv:2510.03597,
+  title   = {Neon: Negative Extrapolation From Self-Training Improves Image Generation},
+  author  = {Alemohammad, Sina and Wang, Zhangyang and Baraniuk, Richard G.},
+  journal = {arXiv preprint arXiv:2510.03597},
+  year    = {2025}
 }
 ```
 
