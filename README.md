@@ -22,14 +22,14 @@ Scaling generative AI models is bottlenecked by the scarcity of high-quality tra
 
 | Model type    | Dataset          | Base model FID | Neon FID (paper) | Download model                                                                                          |
 | ------------- | ---------------- | -------------: | ---------------: | ------------------------------------------------------------------------------------------------------- |
-| xAR-L         | ImageNet-256     |           1.28 |         **1.02** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_xARL_imagenet256.pth)          |
-| xAR-B         | ImageNet-256     |           1.72 |         **1.31** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_xARB_imagenet256.pth)          |
-| VAR d16       | ImageNet-256     |           3.30 |         **2.01** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_VARd16_imagenet256.pth)        |
-| VAR d36       | ImageNet-512     |           2.63 |         **1.70** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_VARd36_imagenet512.pth)        |
+| xAR-L (cond.)         | ImageNet-256     |           1.28 |         **1.02** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_xARL_imagenet256.pth)          |
+| xAR-B (cond.)         | ImageNet-256     |           1.72 |         **1.31** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_xARB_imagenet256.pth)          |
+| VAR d16 (cond.)       | ImageNet-256     |           3.30 |         **2.01** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_VARd16_imagenet256.pth)        |
+| VAR d36 (cond.)       | ImageNet-512     |           2.63 |         **1.70** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_VARd36_imagenet512.pth)        |
 | EDM (cond.)   | CIFAR-10 (32×32) |           1.78 |         **1.38** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_EDM_conditional_CIFAR10.pkl)   |
 | EDM (uncond.) | CIFAR-10 (32×32) |           1.98 |         **1.38** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_EDM_unconditional_CIFAR10.pkl) |
-| EDM           | FFHQ-64×64       |           2.39 |         **1.12** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_EDM_FFHQ.pkl)                  |
-| IMM           | ImageNet-256     |           1.99 |         **1.46** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_imm_imagenet256.pkl)           |
+| EDM (uncond.)         | FFHQ-64×64       |           2.39 |         **1.12** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_EDM_FFHQ.pkl)                  |
+| IMM  (cond.)          | ImageNet-256     |           1.99 |         **1.46** | [Download](https://huggingface.co/sinaalemohammad/Neon/resolve/main/Neon_imm_imagenet256.pkl)           |
 
 ---
 
